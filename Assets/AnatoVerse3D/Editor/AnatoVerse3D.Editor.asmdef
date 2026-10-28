@@ -1,7 +1,11 @@
 {
     "name": "AnatoVerse3D.Editor",
     "rootNamespace": "AnatoVerse3D.EditorTools",
-    "references": [],
+    "references": [
+        "AnatoVerse3D.Runtime",
+        "Unity.InputSystem",
+        "UnityEngine.UI"
+    ],
     "includePlatforms": [
         "Editor"
     ],

@@ -64,4 +64,23 @@
 - Camera framing includes the vessel stubs, so the heart is not centred tightly; Stage 2 camera controls address viewing.
 - Shadows are off; lighting polish is Stage 4.
 
-## Next: Stage 2 — camera interaction (orbit, zoom, pan, reset)
+## Stage 2 — camera interaction — COMPLETE (2026-10-28)
+
+### Built
+- `Assets/AnatoVerse3D/Scripts/Runtime/HeartOrbitCamera.cs` (assembly `AnatoVerse3D.Runtime`): orbit / pan / zoom / reset using the Input System device API; smoothing; pitch, zoom and pan limits; 4 px drag threshold so clicks stay free for Stage 3 selection (`IsDragging`); ignores gestures that start over UI.
+- `Assets/AnatoVerse3D/Scripts/Runtime/OrbitMath.cs`: pure maths, covered by 19 EditMode tests in `Assets/AnatoVerse3D/Tests/EditMode/`.
+- `Assets/AnatoVerse3D/Editor/Stage2CameraSetup.cs`: menu **AnatoVerse3D → Stage 2 → Set up camera controls** (adds the component, sets limits from drawn bounds, adds EventSystem with InputSystemUIInputModule and a controls help panel).
+- README.md with setup, controls and credits.
+
+### Controls
+Left/right drag rotate · middle drag or Shift + drag pan · wheel or + / − zoom · arrow keys rotate · F reset.
+
+### Results
+All checks 2.1–2.12 passed (docs/TESTING.md). Trackpad not tested.
+
+### Notes for later stages
+- The controls panel uses legacy uGUI `Text` as a temporary test fixture; replace with TextMeshPro or UI Toolkit in Stage 4.
+- Rebuilding the Stage 1 scene removes the Stage 2 components; rerun the Stage 2 setup afterwards.
+- The Editor has Enter Play Mode Options on (no domain or scene reload). Avoid static state in runtime scripts, or reset it explicitly.
+
+## Next: Stage 3 — selection and information (needs MVP confirmation of content scope)

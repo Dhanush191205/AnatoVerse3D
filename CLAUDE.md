@@ -3,14 +3,16 @@
 ## Project
 - Unity project root: `D:\XR Unity\Project\My project` (folder name kept by owner's choice; product name AnatoVerse3D).
 - Editor: Unity 6000.6.5f1. Render pipeline: URP 17.6.0. Input: Input System 1.20.0 only (`activeInputHandler: 1`).
-- Removed deprecated packages: com.unity.purchasing, com.unity.analytics. Don't re-add without a reason.
+- Removed packages: com.unity.purchasing, com.unity.analytics (deprecated), com.unity.collab-proxy (switched VCS mode to Plastic). Don't re-add without a reason.
+- Version Control mode must stay "Visible Meta Files".
 - Windows uses quality level **PC** → `Assets/Settings/PC_RPAsset.asset`. GraphicsSettings has no default RP asset; the quality level supplies it.
 - Owner chose "My project" as canonical (2026-10-28). `D:\XR Unity\Project\AnatoVerse` is an unused template to archive; never edit it.
 
 ## Storage rules
 - Everything (assets, downloads, docs, builds) stays on D:. Never create projects or download assets on C:.
 - Builds go to `D:\XR Unity\Project\My project\Builds\` (git-ignored).
-- Source FBX currently at `D:\XR Unity\Project\CardioVascular41.fbx` (outside the project). Do not re-download.
+- Source FBX original: `D:\XR Unity\Project\CardioVascular41.fbx`. Project copy (LFS): `Assets/AnatoVerse3D/ThirdParty/Z-Anatomy/Models/CardioVascular41.fbx`. Do not re-download.
+- Main scene: `Assets/AnatoVerse3D/Scenes/HeartViewer.unity`. Model structure: docs/MODEL-STRUCTURE.md.
 
 ## Conventions
 - Project-owned content: `Assets/AnatoVerse3D/` (Scenes, Scripts, Prefabs, Materials, UI, Data).
@@ -34,10 +36,10 @@
 
 ## Stage checkpoints
 - [x] Stage 0 — audit, Git, Unity connection (done 2026-10-28)
-- [ ] Stage 1 — visible heart (scene, URP materials, framing, attribution)
+- [x] Stage 1 — visible heart (done 2026-10-28; tooling: menu AnatoVerse3D → Stage 1)
 - [ ] Stage 2 — orbit/zoom/pan/reset camera
 - [ ] Stage 3 — selection, highlight, info panel
 - [ ] Stage 4 — presentation + tested Windows build
 
 ## Docs
-README.md, docs/PROJECT-OVERVIEW.md, docs/ASSET-SOURCES.md, docs/TESTING.md, docs/PROGRESS.md
+README.md (todo), docs/PROJECT-OVERVIEW.md (todo), docs/ASSET-SOURCES.md, docs/MODEL-STRUCTURE.md, docs/TESTING.md, docs/PROGRESS.md

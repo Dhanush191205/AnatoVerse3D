@@ -10,7 +10,8 @@
 | Upstream size | 64,889,388 bytes |
 | Upstream Git blob SHA-1 | `aa5bbcb63ae6e9ace8051111b3a85ea87f00c4f3` |
 | Local copy | `D:\XR Unity\Project\CardioVascular41.fbx`, 64,889,388 bytes, file date 2026-10-26 19:59 IST |
-| Integrity check | Size matches. Content hash **not yet verified** (run `git hash-object` on the local file; it must print the blob SHA above). |
+| In project | `Assets/AnatoVerse3D/ThirdParty/Z-Anatomy/Models/CardioVascular41.fbx` (unmodified copy, stored with Git LFS) |
+| Integrity check | **Verified 2026-10-28**: `git hash-object` on the local file printed `aa5bbcb63ae6e9ace8051111b3a85ea87f00c4f3`, identical to the upstream blob. |
 | Upstream caveat | Z-Anatomy notes that these resource models may not be its latest models. |
 
 ### Licence notices (copies in `docs/licenses/z-anatomy/`)
@@ -31,4 +32,11 @@
 - Whether CardioVascular41.fbx contains any of the separately licensed "other models". To be checked during Stage 1 import.
 
 ### Modifications made by this project
-- None yet.
+- **The FBX file itself is not modified.**
+- Import settings (Unity importer, not the file): Convert Units on, scale factor 1, no cameras/lights/animation/blend shapes, no mesh compression.
+- Materials: the 7 FBX materials (all grey) are remapped to project-owned URP Lit materials in `Assets/AnatoVerse3D/Materials/` with colours chosen by this project (myocardium red-brown, valve leaflets ivory, systemic arteries red, systemic veins blue, pulmonary arteries blue, pulmonary veins red). The colours follow the usual textbook convention and are **not** from the source.
+- HeartViewer scene: shows only the heart, coronary vessels, cardiac veins and the great-vessel segments next to the heart; all other parts of the cardiovascular model are deactivated on the scene instance. Zero-triangle label markers are not drawn.
+- These presentation changes count as adaptations shown alongside the model; the ShareAlike terms apply to any distributed derivative of the model.
+
+### Model structure
+See docs/MODEL-STRUCTURE.md for the verified hierarchy, available heart parts and source anomalies.

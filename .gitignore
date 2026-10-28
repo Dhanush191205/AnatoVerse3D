@@ -1,0 +1,37 @@
+# Unity-generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Editor-generated files
+/.vs/
+/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.userprefs
+
+# Unity Version Control local metadata
+/.plastic/
+
+# Unity Version Control (Plastic) config — this project uses Git
+/ignore.conf
+
+# Misc build/IDE output
+/.idea/
+/[Ee]xported[Oo]bj/
+*.pidb
+*.pdb
+*.mdb
+*.apk
+*.aab
+*.unitypackage
+sysinfo.txt
+crashlytics-build.properties

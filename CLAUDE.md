@@ -3,6 +3,7 @@
 ## Project
 - Unity project root: `D:\XR Unity\Project\My project` (folder name kept by owner's choice; product name AnatoVerse3D).
 - Editor: Unity 6000.6.5f1. Render pipeline: URP 17.6.0. Input: Input System 1.20.0 only (`activeInputHandler: 1`).
+- Removed deprecated packages: com.unity.purchasing, com.unity.analytics. Don't re-add without a reason.
 - Windows uses quality level **PC** → `Assets/Settings/PC_RPAsset.asset`. GraphicsSettings has no default RP asset; the quality level supplies it.
 - Owner chose "My project" as canonical (2026-10-28). `D:\XR Unity\Project\AnatoVerse` is an unused template to archive; never edit it.
 
@@ -24,7 +25,7 @@
 - Repo root = project root, branch `main`. Never force-push, rewrite history, or delete branches without the owner's agreement.
 - Do not use the Z-Anatomy repo as origin.
 - Git LFS (repo-local install) tracks `*.fbx`, `*.obj`, `*.blend` via `.gitattributes`. Verify with `git lfs ls-files` after adding any model.
-- Remote: owner's public GitHub repo `AnatoVerse3D` (URL to be recorded here once created).
+- Remote `origin`: https://github.com/Dhanush191205/AnatoVerse3D (public). First commit `b9e4778` pushed 2026-10-28.
 - Commit trailer: `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
 
 ## Owner preferences
@@ -32,7 +33,7 @@
 - Stop after each functional stage for the owner's test before starting the next.
 
 ## Stage checkpoints
-- [~] Stage 0 — audit, Git, Unity connection (see docs/PROGRESS.md)
+- [x] Stage 0 — audit, Git, Unity connection (done 2026-10-28)
 - [ ] Stage 1 — visible heart (scene, URP materials, framing, attribution)
 - [ ] Stage 2 — orbit/zoom/pan/reset camera
 - [ ] Stage 3 — selection, highlight, info panel
